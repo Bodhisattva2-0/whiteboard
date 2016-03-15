@@ -12,9 +12,9 @@
   <tbody>
     <% @interestings.each do |interesting| %>
       <tr>
+        <td><i class="fa fa-user"></i><%= interesting.user_name %></td>
         <td><%= interesting.title %></td>
         <td><%= interesting.description %></td>
-        <td><%= interesting.user_name %></td>
       </tr>
     <% end %>
   </tbody>
