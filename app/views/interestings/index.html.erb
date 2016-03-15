@@ -1,0 +1,6 @@
+<a href="/interestings/new">Add New Interesting</a>
+<% @interestings.each do |interesting| %>
+  <h3><%= interesting.title %></h3>
+  <p><%= interesting.description %></p>
+  <h6><%= interesting.user_name %></h6>
+<% end %>
