@@ -1,6 +1,21 @@
-<a href="/interestings/new">Add New Interesting</a>
-<% @interestings.each do |interesting| %>
-  <h3><%= interesting.title %></h3>
-  <p><%= interesting.description %></p>
-  <h6><%= interesting.user_name %></h6>
-<% end %>
+<div>
+  <a href="/interestings/new" class="btn btn-danger">Add</a>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Interesting title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @interestings.each do |interesting| %>
+      <tr>
+        <td><%= interesting.title %></td>
+        <td><%= interesting.description %></td>
+        <td><%= interesting.user_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
