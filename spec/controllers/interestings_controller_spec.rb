@@ -9,8 +9,8 @@ describe InterestingsController do
    it "lists all the interestings" do
     2.times {|n| Interesting.create(title: "interesting #{n}", description: "description #{n}", user_name: "user #{n}")}
     get :index
-    expect(assigns(:interestings)[0].title).to eq "interesting 0"
-    expect(assigns(:interestings)[1].title).to eq "interesting 1"
+    expect(assigns(:interestings)[0].title).to eq "interesting 1"
+    expect(assigns(:interestings)[1].title).to eq "interesting 0"
    end
  end
 

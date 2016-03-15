@@ -1,6 +1,6 @@
 class InterestingsController < ApplicationController
   def index
-    @interestings = Interesting.all
+    @interestings = Interesting.all.order(created_at: "DESC")
     render :index
   end
 
